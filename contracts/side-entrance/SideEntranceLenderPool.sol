@@ -44,4 +44,9 @@ contract SideEntranceLenderPool {
         if (address(this).balance < balanceBefore)
             revert RepayFailed();
     }
+
+    //Flashloan user => 1000 eth 
+    //1000eth => pool
+    //balanceOf POOL UNCHANGED
+    //user mapping 1000 eth
 }

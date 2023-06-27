@@ -28,6 +28,9 @@ contract TrusterLenderPool is ReentrancyGuard {
     {
         uint256 balanceBefore = token.balanceOf(address(this));
 
+        //Check balance 1,000,000 tokens
+        //
+
         token.transfer(borrower, amount);
         target.functionCall(data);
 

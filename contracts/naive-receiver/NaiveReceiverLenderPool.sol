@@ -44,7 +44,7 @@ contract NaiveReceiverLenderPool is ReentrancyGuard, IERC3156FlashLender {
             revert UnsupportedCurrency();
         
         uint256 balanceBefore = address(this).balance;
-
+        //1000ETH
         // Transfer ETH and handle control to receiver
         SafeTransferLib.safeTransferETH(address(receiver), amount);
         if(receiver.onFlashLoan(
